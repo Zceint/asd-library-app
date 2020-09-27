@@ -16,10 +16,15 @@
                 <a class="button" style="font-size: 16px" href="index.jsp">Logout</a>
             </div>
         </header>
+       
         
-        <form action="ViewUsersServlet" method="post">
-            <input type="submit" class="button" value="View Users"/>
-        </form>
+        <table style="border-spacing: 10px; margin-bottom: 0; padding-bottom: 0;">
+            <tr>
+                <td><form action="UserServlet" method="post"><input class="button" type="submit" value="View Users"></form></td>
+                <td><a class="button" href="addUser.jsp">Add User</a></td>
+                <td><a class="button" href="">Edit User Information</a></td>
+            </tr>
+        </table>
         
     </body>
 </html>

@@ -23,7 +23,6 @@ public class ConnServlet extends HttpServlet {
 
     private MongoDBConnector mongoDbConnector;  
     private MongoClient mongoClient;
-    private UserDao userDao;
    
     
     @Override //Create and instance of DBConnector for the deployment session
@@ -36,7 +35,7 @@ public class ConnServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         
-        userDao = new UserDao(mongoClient);        
+        UserDao userDao = new UserDao(mongoClient);        
         session.setAttribute("userDao", userDao);   
     }
     

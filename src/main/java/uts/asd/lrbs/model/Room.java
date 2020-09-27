@@ -18,6 +18,12 @@ public class Room implements Serializable  {
     private int maxPeople;
     //private boolean isAvailable;
     
+    public Room(int roomID, String location, int maxPeople) {
+        this.roomID = roomID;
+        this.location = location;
+        this.maxPeople = maxPeople;
+    }
+    
     public int getRoomID() {
         return roomID;
     }

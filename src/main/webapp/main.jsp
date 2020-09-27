@@ -16,7 +16,7 @@
         </header>
         
         <div style="text-align: center; margin: 15px">
-            <a class="button" href="catalogue.jsp">View Catalogue</a>
+            <a class="button" href="ViewCatalogueServlet">View Catalogue</a>
         </div>
     </body>
 </html>

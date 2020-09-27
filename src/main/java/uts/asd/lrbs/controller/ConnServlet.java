@@ -7,6 +7,9 @@ package uts.asd.lrbs.controller;
 
 import com.mongodb.MongoClient;
 import java.io.IOException;
+import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,25 +26,31 @@ public class ConnServlet extends HttpServlet {
 
     private MongoDBConnector mongoDbConnector;  
     private MongoClient mongoClient;
+    private UserDao userDao;
    
     
     @Override //Create and instance of DBConnector for the deployment session
     public void init() {
-        mongoDbConnector = new MongoDBConnector();
-        mongoClient = mongoDbConnector.openConnection();
+        try {
+            mongoDbConnector = new MongoDBConnector();
+            mongoClient = mongoDbConnector.openConnection();
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(ConnServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @Override 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         
-        UserDao userDao = new UserDao(mongoClient);        
+        userDao = new UserDao(mongoClient);        
         session.setAttribute("userDao", userDao);   
     }
     
     @Override //Destroy the servlet and release the resources of the application
      public void destroy() {
          mongoClient.close();
+         mongoDbConnector.closeConnection();
     }
 
 }

@@ -16,6 +16,7 @@
         
         <div style="text-align: center; margin: 15px">
             <a class="button" href="userManagement.jsp">User Management</a>
+            <a class="button" href="libraryRoomManagement.jsp">Library Room Management</a>
         </div>
         
     </body>

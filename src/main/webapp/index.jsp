@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="uts.asd.lrbs.model.*"%>
+<jsp:include page="ConnServlet" flush="true" />
 <!DOCTYPE html>
 <html>
     <head>

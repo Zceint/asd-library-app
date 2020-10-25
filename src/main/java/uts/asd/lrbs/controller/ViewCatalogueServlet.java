@@ -31,7 +31,7 @@ public class ViewCatalogueServlet extends HttpServlet {
         ArrayList<Room> rooms = new ArrayList<>();
         
         try {
-            rooms = roomDao.getRooms();
+            //rooms = roomDao.getRooms();
             session.setAttribute("roomsList", rooms);
             request.getRequestDispatcher("catalogue.jsp").include(request, response);
         }

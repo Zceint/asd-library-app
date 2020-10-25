@@ -30,7 +30,6 @@ public class ReservationServlet extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         //int userID = user.getId();
-        int userID = 101;
         ReservationDao reservationDao = (ReservationDao) session.getAttribute("reservationDao");
         int roomID = Integer.parseInt(request.getParameter("roomID"));
         int noPeople = Integer.parseInt(request.getParameter("noPeople"));

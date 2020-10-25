@@ -25,9 +25,6 @@ public class ConnServlet extends HttpServlet {
 
     private MongoDBConnector mongoDbConnector;  
     private MongoClient mongoClient;
-    private UserDao userDao;
-    private RoomDao roomDao;
-    private ReservationDao reservationDao;
    
     
     @Override //Create and instance of DBConnector for the deployment session

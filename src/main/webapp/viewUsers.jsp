@@ -6,6 +6,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/styles.css">
         <title>View Users</title>
+        <style>
+            td {
+                padding: 15px;
+                border: 1px solid #444444;
+            }
+        </style>
     </head>
     <body>
         <% 
@@ -27,12 +33,21 @@
                 <td>First Name</td>
                 <td>Last Name</td>
                 <td>Email</td>
+                <td>Type</td>
             </tr>
             <tr style="background-color: #efefef;">
-                <td style="padding: 8px;"><%=user.getId()%></td>
-                <td style="padding: 8px;"><%=user.getFirstName()%></td>
-                <td style="padding: 8px;"><%=user.getLastName()%></td>
-                <td style="padding: 8px;"><%=user.getEmail()%></td>
+                <td style="padding: 8px;">101</td>
+                <td style="padding: 8px;">Jim</td>
+                <td style="padding: 8px;">Smith</td>
+                <td style="padding: 8px;">jim@gmail.com</td>
+                <td style="padding: 8px;">Customer</td>
+            </tr>
+            <tr style="background-color: #efefef;">
+                <td style="padding: 8px;">102</td>
+                <td style="padding: 8px;">Steve</td>
+                <td style="padding: 8px;">John</td>
+                <td style="padding: 8px;">steve@gmail.com</td>
+                <td style="padding: 8px;">Staff</td>
             </tr>
             
         </table>

@@ -8,6 +8,9 @@
         <title>Add Supplier</title>
     </head>
     <body>
+        <% 
+            User user = (User) session.getAttribute("user");
+        %>
         <header>
             <div style="position: absolute; top: 20px; left: 5px;">
                 <a class="button" style="font-size: 17px;" href="userManagement.jsp">< Back</a>

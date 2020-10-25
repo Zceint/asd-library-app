@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="uts.asd.lrbs.model.User"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,6 +8,7 @@
         <title>User Management</title>
     </head>
     <body>
+        
         <header>
             <div style="position: absolute; top: 20px; left: 5px;">
                 <a class="button" style="font-size: 16px" href="staffMain.jsp">< Back</a>
@@ -20,9 +22,10 @@
         
         <table style="border-spacing: 10px; margin-bottom: 0; padding-bottom: 0;">
             <tr>
-                <td><form action="UserServlet" method="post"><input class="button" type="submit" value="View Users"></form></td>
+                <!--<td><form action="UserServlet" method="post"><input class="button" type="submit" value="View Users"></form></td>-->
+                <td><a class="button" href="viewUsers.jsp">View Users</a></td>
                 <td><a class="button" href="addUser.jsp">Add User</a></td>
-                <td><a class="button" href="">Edit User Information</a></td>
+                <td><a class="button" href="editUser.jsp">Edit User Information</a></td>
             </tr>
         </table>
         

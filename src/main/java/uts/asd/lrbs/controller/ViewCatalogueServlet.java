@@ -32,7 +32,7 @@ public class ViewCatalogueServlet extends HttpServlet {
         
         try {
             rooms = roomDao.getRooms();
-            request.setAttribute("roomsList", rooms);
+            session.setAttribute("roomsList", rooms);
             request.getRequestDispatcher("catalogue.jsp").include(request, response);
         }
         catch (NullPointerException ex) {

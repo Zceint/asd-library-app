@@ -13,17 +13,25 @@
         <servlet-name>UserServlet</servlet-name>
         <servlet-class>uts.asd.lrbs.controller.UserServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>ViewCatalogueServlet</servlet-name>
         <servlet-class>uts.asd.lrbs.controller.ViewCatalogueServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UserServlet</servlet-name>
-        <url-pattern>/UserServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>ViewCatalogueServlet</servlet-name>
         <url-pattern>/ViewCatalogueServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReservationServlet</servlet-name>
+        <servlet-class>uts.asd.lrbs.controller.ReservationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReservationServlet</servlet-name>
+        <url-pattern>/ReservationServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

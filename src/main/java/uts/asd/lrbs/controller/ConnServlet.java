@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import uts.asd.lrbs.model.dao.MongoDBConnector;
+import uts.asd.lrbs.model.dao.ReservationDao;
+import uts.asd.lrbs.model.dao.RoomDao;
 import uts.asd.lrbs.model.dao.UserDao;
 
 /**
@@ -23,6 +25,9 @@ public class ConnServlet extends HttpServlet {
 
     private MongoDBConnector mongoDbConnector;  
     private MongoClient mongoClient;
+    private UserDao userDao;
+    private RoomDao roomDao;
+    private ReservationDao reservationDao;
    
     
     @Override //Create and instance of DBConnector for the deployment session
@@ -36,7 +41,11 @@ public class ConnServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         UserDao userDao = new UserDao(mongoClient);        
-        session.setAttribute("userDao", userDao);   
+        session.setAttribute("userDao", userDao);
+        RoomDao roomDao = new RoomDao(mongoClient);
+        session.setAttribute("roomDao", roomDao);
+        ReservationDao reservationDao = new ReservationDao(mongoClient);
+        session.setAttribute("reservationDao", reservationDao);
     }
     
     @Override //Destroy the servlet and release the resources of the application

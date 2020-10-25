@@ -3,7 +3,7 @@
 --%>
 
 <%@page import="java.util.ArrayList"%>
-<%@page import="uts.asd.lrbs.model.Room"%>
+<%@page import="uts.asd.lrbs.model.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,6 +14,7 @@
         
         <%
             ArrayList<Room> rooms = (ArrayList<Room>) session.getAttribute("roomsList");
+            User user = (User) session.getAttribute("user");
         %>
         
         <style>
@@ -42,7 +43,7 @@
         
         <div style="text-align: center; margin: 15px">
             <a class="button" href="main.jsp">Back</a>
-            <a class="button" href="">Make a Reservation</a>
+            <a class="button" href="reservation.jsp">Make a Reservation</a>
         </div>
         
         <div class="space"></div>
